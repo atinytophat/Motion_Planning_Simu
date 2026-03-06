@@ -1,0 +1,220 @@
+.waypoint-input {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.waypoint-card {
+  padding: 0.6rem;
+  border-radius: 8px;
+  border: 1px solid rgba(102, 126, 234, 0.25);
+  background: rgba(102, 126, 234, 0.06);
+}
+
+.waypoint-card h3 {
+  margin: 0 0 0.5rem 0;
+  color: #bfc9ff;
+  font-size: 0.85rem;
+}
+
+.input-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.4rem;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.input-group label {
+  font-size: 0.7rem;
+  color: #aeb6d4;
+}
+
+.input-group input,
+.input-group select {
+  padding: 0.35rem 0.4rem;
+  border: 1px solid rgba(102, 126, 234, 0.35);
+  border-radius: 4px;
+  background: rgba(20, 20, 40, 0.65);
+  color: #eef1ff;
+  font-size: 0.75rem;
+}
+
+.input-group input:focus,
+.input-group select:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 2px rgba(102, 126, 234, 0.16);
+}
+
+.mode-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.4rem;
+}
+
+.btn {
+  border: none;
+  border-radius: 4px;
+  padding: 0.4rem 0.6rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #fff;
+}
+
+.btn-success {
+  background: linear-gradient(135deg, #48bb78 0%, #2f8f5a 100%);
+  color: #fff;
+}
+
+.btn-outline {
+  background: rgba(255, 255, 255, 0.06);
+  color: #d7ddff;
+  border: 1px solid rgba(178, 188, 255, 0.24);
+}
+
+.status-text {
+  font-size: 0.7rem;
+  color: #93ffcb;
+  background: rgba(72, 187, 120, 0.12);
+  border: 1px solid rgba(72, 187, 120, 0.3);
+  padding: 0.4rem 0.5rem;
+  border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+  .input-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Joint Slider Styles */
+.joint-slider-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  padding: 0.4rem;
+  background: rgba(102, 126, 234, 0.04);
+  border-radius: 6px;
+  border: 1px solid rgba(102, 126, 234, 0.15);
+}
+
+.joint-slider-group label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.75rem;
+  color: #aeb6d4;
+  font-weight: 500;
+}
+
+.joint-slider-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.2rem;
+}
+
+.joint-slider-header label {
+  display: block;
+  font-size: 0.75rem;
+  color: #aeb6d4;
+  font-weight: 500;
+  margin: 0;
+}
+
+.joint-value-input {
+  color: #667eea;
+  font-weight: 600;
+  font-size: 0.8rem;
+  border: none;
+  border-bottom: 1px solid #667eea;
+  background: transparent;
+  width: 50px;
+  padding: 2px 4px;
+  outline: none;
+  text-align: center;
+}
+
+.joint-value-input:focus {
+  background: rgba(102, 126, 234, 0.1);
+  border-bottom: 2px solid #667eea;
+}
+
+.joint-value {
+  color: #667eea;
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+
+.joint-slider {
+  width: 100%;
+  height: 6px;
+  border-radius: 3px;
+  background: linear-gradient(to right, rgba(102, 126, 234, 0.2), rgba(102, 126, 234, 0.4));
+  outline: none;
+  -webkit-appearance: none;
+  appearance: none;
+  cursor: pointer;
+}
+
+.joint-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  cursor: pointer;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 0 8px rgba(102, 126, 234, 0.5);
+  transition: all 0.2s ease;
+}
+
+.joint-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0 12px rgba(102, 126, 234, 0.8);
+}
+
+.joint-slider::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  cursor: pointer;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 0 8px rgba(102, 126, 234, 0.5);
+  transition: all 0.2s ease;
+}
+
+.joint-slider::-moz-range-thumb:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0 12px rgba(102, 126, 234, 0.8);
+}
+
+.slider-limits {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.65rem;
+  color: rgba(174, 182, 212, 0.7);
+}
+
+.slider-limits .min,
+.slider-limits .max {
+  font-weight: 500;
+}

@@ -1,0 +1,339 @@
+.motion-control {
+  background: linear-gradient(135deg, #2a2a2a 0%, #1e1e1e 100%);
+  border-radius: 12px;
+  padding: 24px;
+  color: #ffffff;
+  border: 2px solid rgba(100, 200, 255, 0.3);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  max-height: 85vh;
+  overflow-y: auto;
+}
+
+.motion-control h2 {
+  color: #64c8ff;
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 24px;
+  text-align: center;
+  border-bottom: 2px solid rgba(100, 200, 255, 0.5);
+  padding-bottom: 12px;
+}
+
+.motion-control h3 {
+  color: #a0d8ff;
+  margin-top: 18px;
+  margin-bottom: 12px;
+  font-size: 16px;
+}
+
+.motion-control h4 {
+  color: #a0d8ff;
+  margin-top: 12px;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+/* Control Sections */
+.control-section {
+  margin-bottom: 24px;
+  padding: 16px;
+  background: rgba(100, 200, 255, 0.05);
+  border-radius: 8px;
+  border-left: 3px solid rgba(100, 200, 255, 0.3);
+}
+
+/* Radio Buttons */
+.radio-group {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 12px;
+}
+
+.radio-group label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.radio-group input[type="radio"] {
+  cursor: pointer;
+  accent-color: #64c8ff;
+  width: 18px;
+  height: 18px;
+}
+
+/* Theta Input Grid */
+.theta-input {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.input-group label {
+  font-size: 12px;
+  color: #a0d8ff;
+  font-weight: 600;
+}
+
+.input-group input {
+  padding: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(100, 200, 255, 0.3);
+  border-radius: 4px;
+  color: #ffffff;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: #64c8ff;
+  background: rgba(100, 200, 255, 0.15);
+  box-shadow: 0 0 8px rgba(100, 200, 255, 0.2);
+}
+
+/* Configuration Group */
+.config-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.config-group label {
+  font-size: 14px;
+  color: #a0d8ff;
+  font-weight: 600;
+}
+
+.config-group select,
+.config-group input[type="range"] {
+  padding: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(100, 200, 255, 0.3);
+  border-radius: 4px;
+  color: #ffffff;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.config-group select {
+  padding: 10px;
+}
+
+.config-group select:hover,
+.config-group select:focus {
+  border-color: #64c8ff;
+  background: rgba(100, 200, 255, 0.15);
+}
+
+.config-group input[type="range"] {
+  padding: 0;
+  height: 6px;
+  accent-color: #64c8ff;
+}
+
+/* Buttons */
+.btn-primary {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(135deg, #64c8ff 0%, #3d9fd9 100%);
+  border: none;
+  border-radius: 6px;
+  color: #000;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(100, 200, 255, 0.3);
+}
+
+.btn-primary:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(100, 200, 255, 0.4);
+}
+
+.btn-primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.button-group {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.button-group button {
+  padding: 10px;
+  background: linear-gradient(135deg, #64c8ff 0%, #3d9fd9 100%);
+  border: none;
+  border-radius: 6px;
+  color: #000;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.button-group button:hover:not(:disabled) {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(100, 200, 255, 0.3);
+}
+
+.button-group button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Animation Info */
+.animation-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 12px;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.animation-info p {
+  margin: 0;
+  color: #a0d8ff;
+}
+
+/* Timeline Slider */
+.slider-group {
+  margin: 16px 0;
+}
+
+.timeline-slider {
+  width: 100%;
+  height: 8px;
+  border-radius: 4px;
+  background: linear-gradient(to right, rgba(100, 200, 255, 0.3), rgba(100, 200, 255, 0.6));
+  outline: none;
+  -webkit-appearance: none;
+  appearance: none;
+  cursor: pointer;
+}
+
+.timeline-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #64c8ff;
+  cursor: pointer;
+  box-shadow: 0 0 8px rgba(100, 200, 255, 0.5);
+  transition: all 0.2s ease;
+}
+
+.timeline-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0 12px rgba(100, 200, 255, 0.8);
+}
+
+.timeline-slider::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #64c8ff;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 0 8px rgba(100, 200, 255, 0.5);
+  transition: all 0.2s ease;
+}
+
+.timeline-slider::-moz-range-thumb:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0 12px rgba(100, 200, 255, 0.8);
+}
+
+/* Current Pose Display */
+.current-pose {
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  border: 1px solid rgba(100, 200, 255, 0.2);
+}
+
+.pose-values {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 8px;
+}
+
+.pose-value {
+  padding: 8px;
+  background: rgba(100, 200, 255, 0.1);
+  border-radius: 4px;
+  border: 1px solid rgba(100, 200, 255, 0.2);
+  font-family: 'Courier New', monospace;
+  font-size: 12px;
+  color: #64c8ff;
+  text-align: center;
+}
+
+/* Error Message */
+.error-message {
+  padding: 12px;
+  background: rgba(255, 100, 100, 0.15);
+  border: 2px solid rgba(255, 100, 100, 0.5);
+  border-radius: 6px;
+  color: #ff9999;
+  margin-bottom: 16px;
+  font-size: 14px;
+}
+
+/* Scrollbar Styling */
+.motion-control::-webkit-scrollbar {
+  width: 8px;
+}
+
+.motion-control::-webkit-scrollbar-track {
+  background: rgba(100, 200, 255, 0.05);
+  border-radius: 4px;
+}
+
+.motion-control::-webkit-scrollbar-thumb {
+  background: rgba(100, 200, 255, 0.3);
+  border-radius: 4px;
+}
+
+.motion-control::-webkit-scrollbar-thumb:hover {
+  background: rgba(100, 200, 255, 0.5);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .motion-control {
+    padding: 16px;
+    max-height: 80vh;
+  }
+
+  .theta-input {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .button-group {
+    grid-template-columns: 1fr;
+  }
+
+  .animation-info {
+    grid-template-columns: 1fr;
+  }
+}

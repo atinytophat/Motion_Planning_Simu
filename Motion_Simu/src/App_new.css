@@ -1,0 +1,341 @@
+/* Main App Container */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: #0a0e27;
+  color: #ffffff;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+}
+
+/* Header */
+.app-header {
+  background: linear-gradient(135deg, #1a1f3a 0%, #0f1629 100%);
+  padding: 24px;
+  border-bottom: 2px solid rgba(100, 200, 255, 0.3);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.app-header h1 {
+  margin: 0 0 8px 0;
+  font-size: 32px;
+  background: linear-gradient(135deg, #64c8ff 0%, #3d9fd9 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.app-header p {
+  margin: 0 0 12px 0;
+  font-size: 16px;
+  color: #a0d8ff;
+  opacity: 0.9;
+}
+
+.api-status {
+  margin-top: 12px;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 24px;
+  font-size: 13px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.status-badge.connected {
+  background: rgba(76, 175, 80, 0.2);
+  border: 1px solid rgba(76, 175, 80, 0.5);
+  color: #4caf50;
+}
+
+.status-badge.error {
+  background: rgba(244, 67, 54, 0.2);
+  border: 1px solid rgba(244, 67, 54, 0.5);
+  color: #f44336;
+}
+
+.status-badge.checking {
+  background: rgba(255, 152, 0, 0.2);
+  border: 1px solid rgba(255, 152, 0, 0.5);
+  color: #ff9800;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+/* Error Banner */
+.error-banner {
+  background: rgba(244, 67, 54, 0.1);
+  border: 2px solid rgba(244, 67, 54, 0.5);
+  padding: 16px 24px;
+  margin: 12px 24px;
+  border-radius: 8px;
+  color: #ff9999;
+}
+
+.error-banner h3 {
+  margin: 0 0 8px 0;
+  font-size: 16px;
+}
+
+.error-banner p {
+  margin: 6px 0;
+  font-size: 14px;
+}
+
+.error-banner code {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-family: 'Courier New', monospace;
+}
+
+/* Offline Notice */
+.offline-notice {
+  padding: 24px;
+  background: rgba(255, 152, 0, 0.1);
+  border: 2px solid rgba(255, 152, 0, 0.3);
+  border-radius: 8px;
+  text-align: center;
+  margin: 24px;
+  color: #ffb74d;
+}
+
+.offline-notice h3 {
+  margin-top: 0;
+  color: #ff9800;
+}
+
+.offline-notice p {
+  margin: 12px 0;
+  font-size: 14px;
+}
+
+.offline-notice code {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 8px 12px;
+  border-radius: 4px;
+  display: block;
+  margin: 12px 0;
+  font-size: 12px;
+  font-family: 'Courier New', monospace;
+}
+
+/* App Layout */
+.app-layout {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: 12px;
+  padding: 12px;
+  flex: 1;
+  overflow: hidden;
+}
+
+/* Sidebar */
+.sidebar {
+  background: #0f1629;
+  border-radius: 8px;
+  padding: 0;
+  overflow-y: auto;
+  border: 1px solid rgba(100, 200, 255, 0.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Sidebar Scrollbar */
+.sidebar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+  background: rgba(100, 200, 255, 0.05);
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background: rgba(100, 200, 255, 0.3);
+  border-radius: 4px;
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover {
+  background: rgba(100, 200, 255, 0.5);
+}
+
+/* Main Content */
+.main-content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  overflow: hidden;
+}
+
+/* Sections */
+.visualizer-section,
+.plotter-section {
+  background: #0f1629;
+  border-radius: 8px;
+  padding: 20px;
+  border: 1px solid rgba(100, 200, 255, 0.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.visualizer-section {
+  flex: 1.2;
+  min-height: 400px;
+}
+
+.plotter-section {
+  flex: 0.8;
+  min-height: 250px;
+  overflow-y: auto;
+}
+
+.visualizer-section h2,
+.plotter-section h2 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  color: #64c8ff;
+  font-size: 18px;
+  border-bottom: 2px solid rgba(100, 200, 255, 0.3);
+  padding-bottom: 8px;
+}
+
+/* Visualizer Container */
+.visualizer-section > div {
+  flex: 1;
+  min-height: 0;
+}
+
+/* Empty State */
+.empty-state {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: #666;
+  font-size: 16px;
+  text-align: center;
+}
+
+/* Footer */
+.app-footer {
+  background: linear-gradient(135deg, #1a1f3a 0%, #0f1629 100%);
+  padding: 12px 24px;
+  text-align: center;
+  border-top: 1px solid rgba(100, 200, 255, 0.2);
+  font-size: 12px;
+  color: #666;
+}
+
+.app-footer p {
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .app-layout {
+    grid-template-columns: 350px 1fr;
+  }
+}
+
+@media (max-width: 992px) {
+  .app-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    order: 2;
+    max-height: 400px;
+  }
+
+  .main-content {
+    order: 1;
+  }
+
+  .visualizer-section,
+  .plotter-section {
+    flex: 1;
+    min-height: 300px;
+  }
+}
+
+@media (max-width: 576px) {
+  .app-header h1 {
+    font-size: 24px;
+  }
+
+  .app-header p {
+    font-size: 14px;
+  }
+
+  .app-layout {
+    gap: 8px;
+    padding: 8px;
+  }
+
+  .visualizer-section,
+  .plotter-section {
+    padding: 12px;
+  }
+
+  .visualizer-section h2,
+  .plotter-section h2 {
+    font-size: 16px;
+  }
+}
+
+/* Dark Theme Scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(100, 200, 255, 0.05);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(100, 200, 255, 0.3);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(100, 200, 255, 0.5);
+}
+
+/* Selection Color */
+::selection {
+  background: rgba(100, 200, 255, 0.3);
+  color: inherit;
+}
+
+::-moz-selection {
+  background: rgba(100, 200, 255, 0.3);
+  color: inherit;
+}
+
+/* Global Focus Outline */
+*:focus-visible {
+  outline: 2px solid rgba(100, 200, 255, 0.5);
+  outline-offset: 2px;
+}
+
+/* Input Focus Styling */
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: 2px solid rgba(100, 200, 255, 0.5);
+  outline-offset: 2px;
+}
